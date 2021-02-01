@@ -1,0 +1,132 @@
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    min-height: 581px;
+    min-width: 528px;
+    padding: 0;
+    margin: 0;
+    background-color: $primary-bg-color;
+
+    &-title {
+      margin: 0 auto 12px auto;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-modal;
+      color: $title-text-color;
+    }
+    &-window-form {
+      padding: 0 40px 40px 40px;
+    }
+  }
+  
+.close-button {
+    top: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-right: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: transparent;
+  
+    transition: transform $function-time $function-cubic;
+  &:hover,
+  &:focus {
+      color: $accent-color;
+    }
+  }
+  .form-field-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .icon-position {
+    position: relative;
+  }
+  .field {
+    display: block;
+    margin-bottom: 10px;
+    transition: $function-time $function-cubic;
+    &:last-child {
+      margin-bottom: 30px;
+    }
+    & .text {
+      margin-bottom: 4px;
+      font-size: $font-size-field;
+      letter-spacing: $font-spacing-field;
+      color: $primary-text-color;
+    }
+    & input {
+      padding: 11px 12px 11px 41px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+      width: 100%;
+    }
+    & textarea::placeholder {
+      font-size: $font-size-field;
+      letter-spacing: $font-spacing-field;
+      color:  rgba(117, 117, 117, 0.5);
+    }
+    & textarea {
+      display: block;
+      padding: 12px 16px 12px 16px;
+      resize: none;
+      width: 100%;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+    &:focus-within input,
+    &:focus-within .input-svg-properties,
+    &:hover input,
+    &:hover .input-svg-properties {
+      border-color: $accent-color;
+      fill: $accent-color;
+      cursor: pointer;
+    }
+  }
+  .input-svg-properties {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    fill: $title-text-color;
+    height: 18px;
+    width: 18px;
+    margin-left: 12px;
+  }
+  .conditions {
+    line-height: $font-height-tertiary;
+    letter-spacing: $font-spacing-basic;
+    color: $primary-text-color;
+    &-link {
+      color: $accent-color;
+    }
+  }
+  .checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    &:checked + .checkbox-icon::before {
+      background-image: url(../images/check.svg);
+    }
+  }
+  .checkbox-icon::before {
+    content: '';
+    display: inline-flex;
+    background-image: url(../images/square.svg);
+    width: 16px;
+    height: 15px;
+    margin-right: 8.38px;
+  }

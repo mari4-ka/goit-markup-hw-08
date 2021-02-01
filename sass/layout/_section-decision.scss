@@ -1,0 +1,43 @@
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+  
+.decision {
+    & .list {
+        @extend %list;
+    }
+    & .item {
+        width: 270px;
+    }
+    &-icon {
+      height: 70px;
+      width: 70px;
+      justify-content: center;
+      fill: $title-text-color;
+    }
+    & .title {
+      margin-top: 0px;
+      margin-bottom: 10px;
+      color: $title-text-color;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+    }
+    & .text {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      line-height: $font-height-secondaty;
+    }
+} 
+.item-background {
+  @include centeredFlex ();
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    background-color: $secondary-bg-color;
+  
+    border-radius: 4px;
+}

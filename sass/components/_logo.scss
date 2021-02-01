@@ -1,0 +1,17 @@
+.logo {
+    @include centeredFlex ();
+    text-decoration: none;
+    margin-top: 24px;
+    margin-bottom: 25px;
+    margin-right: 93px;
+  
+    font-family: $font-family-logo;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-logo;
+    &-web {
+        color: $accent-color;
+    }
+  }
+.header-studio {
+    color: $title-text-color;
+  }

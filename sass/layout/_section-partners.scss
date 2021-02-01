@@ -1,0 +1,27 @@
+.partners {
+    & .title {
+        @extend %title;
+    }
+    & .list {
+        @extend %list;
+    }
+    &-item {
+        @include centeredFlex ();
+    }
+    &-link {
+        @include centeredFlex (inline-flex);
+        border: none;
+        border-radius: 4px;
+        height: 90px;
+        width: 170px;
+        border: 1px solid $border-partners;
+        fill: $icon-grey;
+        transition: $function-time $function-cubic;
+    }
+    &-link:hover,
+    &-link:focus {
+        border: 1px solid $accent-color;
+        fill: $accent-color;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,36 @@
+.contacts {
+  display: flex;
+  margin-left: auto;
+  &.list .item {
+    display: flex;
+  }
+  & .link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $primary-text-color;
+    @extend %header-link;
+  }
+  & .link.mail,
+  & .link.tel {
+    align-items: center;
+    fill: $primary-text-color;
+    transition: $function-time $function-cubic;
+  }
+  & .icon-mail,
+  & .icon-tel {
+    margin-right: 10px;
+  }
+  & .link.mail:hover,
+  & .link.mail:focus,
+  & .link.tel:hover,
+  & .link.tel:focus {
+    color: $accent-color;
+    fill: $accent-color;
+    cursor: pointer;
+  }
+  & .item + .item {
+    margin-left: 50px;
+  }
+}
+  

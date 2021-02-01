@@ -1,0 +1,76 @@
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    & .item {
+      margin-right: 30px;
+      margin-top: 30px;
+      width: calc((100% - 60px) / 3);
+    }
+    & .item:nth-child(3n) {
+      margin-right: 0px;
+    }
+    & .link {
+      display: block;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-decoration: none;
+    }
+    & .thumb {
+      position: relative;
+      overflow: hidden;
+    }
+    & .thumb:hover::before,
+    & .thumb:focus::before {
+      opacity: 1;
+    }
+    & .link:hover,
+    & .link:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    & .link:hover .card-overlay,
+    & .link:focus .card-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+.portfolio-description {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 20px 24px;
+  border: 1px solid $portfolio-border;
+  border-top: transparent;
+}
+.project-name {
+  margin-top: 0px;
+  margin-bottom: 4px;
+  color: $title-text-color;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-tertiary;
+  line-height: $font-height-tertiary;
+  letter-spacing: $font-spacing-accent;
+}
+.project {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: $primary-text-color;
+  font-size: $font-size-secondary;
+  line-height: $font-height-button;
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform $function-time $function-cubic,
+              opacity $function-time $function-cubic;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 63px 24px;
+  font-size: $font-size-tertiary;
+  line-height: $font-height-overlay;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: $secondary-text-color;
+}

@@ -1,0 +1,30 @@
+.social-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    & .list {
+      margin-right: 10px;
+    }
+    & .list:last-child {
+      margin-right: 0px;
+    }
+  }
+.icon-social {
+    height: 20px;
+    width: 20px;
+  }
+
+.team .link-social {
+    @extend %social-icons;
+    fill: $icon-grey;
+  }
+.footer .link-social {
+    @extend %social-icons;
+    fill: $icon-white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.link-social:hover,
+.link-social:focus {
+    fill: $icon-white;
+    background-color: $accent-color;
+}
