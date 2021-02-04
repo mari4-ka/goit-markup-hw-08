@@ -3,3 +3,9 @@
     align-items: center;
     justify-content: center;
 }
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}

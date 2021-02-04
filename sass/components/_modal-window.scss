@@ -6,17 +6,30 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    min-height: 581px;
-    min-width: 528px;
+    min-width: 450px;
+    min-height: 609px;
     padding: 0;
     margin: 0;
     background-color: $primary-bg-color;
 
+    @media screen and (min-width: $width-desktop){
+      min-width: 528px;
+      min-height: 581px;
+    }
+
     &-title {
       margin: 0 auto 12px auto;
+      text-align: center;
       font-weight: $font-weight-bold;
-      font-size: $font-size-modal;
+      font-size: 20px;
       color: $title-text-color;
+      line-height: 1.5;
+      letter-spacing: 0.03em;
+
+      @media screen and (min-width: $width-desktop) {
+        letter-spacing: 1.15;
+      }
+
     }
     &-window-form {
       padding: 0 40px 40px 40px;
@@ -102,11 +115,18 @@
     margin-left: 12px;
   }
   .conditions {
-    line-height: $font-height-tertiary;
-    letter-spacing: $font-spacing-basic;
-    color: $primary-text-color;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 00.03em;
+    color: $primary-text-color;  
     &-link {
       color: $accent-color;
+    }
+
+    @media screen and (min-width: $width-desktop) {
+      font-size: 14px;
+      line-height: 1.7;
     }
   }
   .checkbox {

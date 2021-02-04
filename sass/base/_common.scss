@@ -1,20 +1,29 @@
 body {
     margin: 0;
+
     color: $primary-text-color;
     background-color: $primary-bg-color;
   
     font-family: $font-family-basic;
-    font-size: $font-size-basic;
-    font-weight: $font-weight-normal;
-    letter-spacing: $font-spacing-basic;
-    line-height: $font-height-basic;
+    // font-size: $font-size-basic;
+    // font-weight: $font-weight-normal;
+    // letter-spacing: $font-spacing-basic;
+    // line-height: $font-height-basic;
   }
   .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
+    width: $width-mobile;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media screen and (min-width: $width-mobile) {
+      width: $width-mobile;
+    }
+    @media screen and (min-width: $width-tablet) {
+      width: $width-tablet;
+    }
+    @media screen and (min-width: $width-desktop) {
+      width: $width-desktop;
+    }
   }
   .list {
     margin: 0px;
@@ -27,6 +36,11 @@ body {
     height: auto;
   }
   .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: $width-desktop) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
   }

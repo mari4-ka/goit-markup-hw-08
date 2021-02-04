@@ -1,17 +1,30 @@
 .logo {
-    @include centeredFlex ();
+    margin-top: 16px;
     text-decoration: none;
-    margin-top: 24px;
-    margin-bottom: 25px;
-    margin-right: 93px;
-  
+
     font-family: $font-family-logo;
     font-weight: $font-weight-bold;
-    font-size: $font-size-logo;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 00.03em;
+
     &-web {
         color: $accent-color;
     }
-  }
-.header-studio {
-    color: $title-text-color;
+    &-studio {
+      color: $title-text-color;
+    }
+    &-studio.inverted {
+      filter: invert(100%);
+    }
+
+    @media screen and (min-width: $width-tablet) {
+      margin-top: 26px;
+    }
+
+    @media screen and (min-width: $width-desktop) {
+      margin-top: 24px;
+      font-size: 26px;
+      line-height: 1.19;
+    }
   }
