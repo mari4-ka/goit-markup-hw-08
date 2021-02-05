@@ -4,12 +4,9 @@
     }
     & .list {
         @extend %list;
-        outline: 1px solid tomato;
         margin: -15px
     }
     & .item {
-        outline: 1px solid green;
-
         @media screen and (min-width: 480px) {
             width: calc((100% - 2 * 30px)/2);
             margin: 15px;
@@ -35,8 +32,8 @@
         fill: $icon-grey;
         transition: $function-time $function-cubic;
     }
-    &-link:hover,
-    &-link:focus {
+    & .link:hover,
+    & .link:focus {
         border: 1px solid $accent-color;
         fill: $accent-color;
         cursor: pointer;

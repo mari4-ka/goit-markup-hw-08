@@ -1,0 +1,46 @@
+.filter-list {
+    display: flex;
+    margin: -7.5px;
+}
+.filter {
+    padding: 6px 22px;
+    min-width: 73px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: $title-text-color;
+    background-color: $secondary-bg-color;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-secondary;
+    line-height: $font-height-filter;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: $function-time $function-cubic;
+
+    &-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        margin-bottom: 40px;
+
+        @media screen and (min-width: $width-tablet) {
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width: $width-tablet) {
+            margin-bottom: 34px;
+        }
+    }
+    &-list .item {
+        margin: 7.5px;
+    }
+    &:hover,
+    &:focus {
+      color: $secondary-text-color;
+      background-color: $accent-color;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+}

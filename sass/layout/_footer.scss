@@ -6,11 +6,21 @@
     & .container {
 
         @media screen and (min-width: $width-tablet) {
+            .footer-position {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .footer-1-block, .footer-2-block {
+                display: block;
+            }
+        }
+        @media screen and (min-width: $width-desktop) {
             display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: baseline;
-            flex-wrap: nowrap;
+            // flex-direction: row;
+            // justify-content: flex-start;
+            // align-items: baseline;
+            // flex-wrap: nowrap;
         }
     }
 }

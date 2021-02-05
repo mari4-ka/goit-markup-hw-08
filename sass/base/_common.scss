@@ -9,6 +9,10 @@ body {
     // font-weight: $font-weight-normal;
     // letter-spacing: $font-spacing-basic;
     // line-height: $font-height-basic;
+
+    &.modal-open {
+      overflow: hidden;
+    }
   }
   .container {
     width: $width-mobile;

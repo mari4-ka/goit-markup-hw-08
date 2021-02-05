@@ -1,68 +1,7 @@
 .page-header {
     position: relative;
 }
-.main-nav {
-    display: flex;
-    margin-left: 0px;
-    margin-right: 0px;
-    min-height: 60px;
-
-    .site-nav.list {
-        background-color: rgb(206, 235, 206);
-        padding: 48px 40px 0 48px;
-    }
-    .contacts.list {
-        background-color: rgb(243, 212, 228);
-    }
-    .social.list {
-        background-color: rgb(218, 238, 237);
-    }
-    .link {
-        text-decoration: none;
-    }
-    .site-nav .link {
-        font-size: 40px;
-        line-height: 1.175;
-        font-weight: 500;
-        letter-spacing: 0.02em;
-        color: #212121;
-    }
-    .contacts {
-        // display: flex;
-        // flex-direction: column-reverse;
-        padding: 0 40px;    
-    }
-    .contacts .mail {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 1.167;
-        letter-spacing: 0.02em;
-        color: #757575;
-    }
-    .contacts .tel {
-        font-weight: 500;
-        font-size: 34px;
-        line-height: 1.176;
-        letter-spacing: 0.02em;
-        color: #757575;
-    }
-    .social .link {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1.22;
-        letter-spacing: 0.02em;
-        color: #2196F3;
-    }
-    .social.list {
-        display: flex;
-        padding: 0 0 48 40;
-    }
-    .site-nav .item + .item,
-    .contacts .item + .item {
-        margin-top: 32px;
-    }
-}
-
+// buttons
 .main-nav {
     &-button {
         margin-left: auto;
@@ -70,6 +9,8 @@
         background-color: transparent;
         transition: $function-time $function-cubic;
         cursor: pointer;
+        z-index: 1;
+        justify-content: center;
 
         @media screen and (min-width: $width-tablet) {
             display: none;
@@ -84,33 +25,165 @@
     &-button.is-open .icon-hamburger {
         display: none;
     }
-    &-button:hover {
+    &-button:hover,
+    &-button:focus {
         fill: $accent-color;
     }
+}
 
+//all navigation logo+nav+button+contacrs
+.main-nav {
+    display: flex;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-height: 60px;   
+    & .link {
+        text-decoration: none;
+    }
+}
+.contacts.list .item {
+    display: flex;
+  }
+.menu-container {
+    background-color: white;
+    font-weight: 500;
+    letter-spacing: 00.02em;
+    
+        & .site-nav .link {
+            // font-size: 14px;
+            line-height: 1.14;
+            color: #212121;
+            min-height: 60px;
+        }
+        & .contacts .link {
+            display: flex;
+            line-height: 1.17;
+            color: #757575;
+            .icon-tel, 
+            .icon-mail {
+                fill: #757575;
+            }
+        }
+        & .item:hover .link,
+        & .item:focus .link,
+        & .item:hover .mail,
+        & .item:hover .tel,
+        & .item:focus .mail,
+        & .item:focus .tel {
+            color: $accent-color;
+            fill: $accent-color;
+            cursor: pointer;
+        }
+        .icon-tel, .icon-mail {
+            margin-right: 8px;
+        }
 }
 
 @media screen and (max-width: 767px) {
     .menu-container {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      top: 0;
-      width: 100%;
+        padding: 48px 40px;
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        &.is-open {
+            display: block;
+      }
     }
-    .menu-container.is-open {
-      display: block;
+    .site-nav {
+        &.list {
+           margin-bottom: 302px;
+        }
+        & .link {
+            font-size: 40px;
+            line-height: 1.175;
+            font-size: 40px;
+        }
+        & .item + .item {
+            margin-top: 32px;
+        }
     }
-    .icon-mail, .icon-tel {
+    .contacts {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 64px;
+
+        .item + .item {
+            margin-bottom: 32px;
+        }
+        & .mail {
+            font-size: 24px;
+        }
+        & .tel {
+            font-size: 34px;
+        }
+        .icon-mail, .icon-tel {
         display: none;
     } 
+    }
+    .social {
+        & .link {
+            font-size: 18px;
+            line-height: 1.22;
+            color: $accent-color;
+        }
+        // & .item + .item {
+        //     border-left: 1px solid 
+        //     rgba(33, 33, 33, 0.2);
+        // }
+        &.list {
+            display: flex;
+        }
+    }
 }
-
 @media screen and (min-width: $width-tablet) {
     .menu-container {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+    }
+    .main-nav .logo {
+        margin-right: 88px;
+    }
+    .site-nav {
+        display: flex;
+        position: relative;
+        & .item + .item {
+            margin-left: 50px;      
+        }
+        & .link {
+            display: block;
+            position: relative;
+            min-height: 80px;
+            justify-content: center;
+            font-size: 12px;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            transition: $function-time $function-cubic;  
+        }
+        & .link.current:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $accent-color;
+            color: $accent-color;
+        }
+    }
+    .main-nav .contacts {
+        margin-top: 21px;
+        font-size: 12px;
+        line-height: 1.17;
+    }
+    .main-nav .contacts .item + .item {
+        margin-top: 10px;
+    }
+    .main-nav .social {
+        display: none;
     }
   }

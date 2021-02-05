@@ -10,4 +10,4 @@
 
             e.currentTarget.reset();
         });
-})();
+}) ();
