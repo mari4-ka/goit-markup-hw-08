@@ -8,7 +8,7 @@
   
 .decision {
   padding-bottom: 0;
-    & .list {
+  & .list {
         @extend %list;
 
         @media screen and (min-width: 768px) {
@@ -16,40 +16,38 @@
             flex-wrap: wrap;
             margin: -15px;
         }
-    }
-    & .item {
-        @media screen and (min-width: 768px) {
-            width: calc((100% - 2 * 30px)/2);
-            margin: 15px;
-        }
-        @media screen and (min-width: 1200px) {
-            width: calc((100% - 4 * 30px)/4);
-            margin: 15px;
-        }
-    }
-
-    & .item:not(:last-child) {
-      @media screen and (max-width: 767px) {
-          margin-bottom: 30px;
-        }
+  }
+  & .item {
+    margin: 15px;
+      @media screen and (min-width: 768px) {
+        width: calc((100% - 2 * 30px)/2);
       }
-    &-icon {
+      @media screen and (min-width: 1200px) {
+        width: calc((100% - 4 * 30px)/4);
+      }
+  }
+  // & .item:not(:last-child) {
+  //     @media screen and (max-width: 767px) {
+  //         margin-bottom: 30px;
+  //       }
+  //     }
+  &-icon {
       height: 70px;
       width: 70px;
       justify-content: center;
       fill: $title-text-color;
-    }
-    & .title {
-      margin-top: 0px;
-      margin-bottom: 10px;
-      text-align: center;
+  }
+  & .title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
 
-      color: $title-text-color;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 1.14;
-      letter-spacing: 00.03em;
-      text-transform: uppercase;
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 00.03em;
+    text-transform: uppercase;
 
     & .text {
       margin-top: 0px;
@@ -61,6 +59,10 @@
       letter-spacing: 00.03em;
     }
     }
+  & .text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 } 
 .background-picture {
   @include centeredFlex ();

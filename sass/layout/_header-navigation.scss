@@ -128,10 +128,24 @@
             line-height: 1.22;
             color: $accent-color;
         }
-        // & .item + .item {
-        //     border-left: 1px solid 
-        //     rgba(33, 33, 33, 0.2);
+        // & .link:after {
+        //     content: '';
+        //     display: block;
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     height: 100%;
+        //     height: 4px;
+        //     border-radius: 2px;
+        //     background-color: $accent-color;
+        //     color: $accent-color;
         // }
+        & .item + .item {
+            padding-left: 10px;
+            margin-left: 10px;
+            border-left: 1px solid 
+            rgba(33, 33, 33, 0.2);
+        }
         &.list {
             display: flex;
         }
