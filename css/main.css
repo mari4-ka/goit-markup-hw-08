@@ -498,12 +498,6 @@ img {
   text-decoration: none;
 }
 
-.contacts.list .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .menu-container {
   background-color: white;
   font-weight: 500;
@@ -511,16 +505,10 @@ img {
 }
 
 .menu-container .site-nav .link {
-  line-height: 1.14;
   color: #212121;
-  min-height: 60px;
 }
 
 .menu-container .contacts .link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1.17;
   color: #757575;
 }
 
@@ -540,10 +528,6 @@ img {
   cursor: pointer;
 }
 
-.menu-container .icon-tel, .menu-container .icon-mail {
-  margin-right: 8px;
-}
-
 @media screen and (max-width: 767px) {
   .menu-container {
     padding: 48px 40px;
@@ -556,18 +540,31 @@ img {
   .menu-container.is-open {
     display: block;
   }
-  .site-nav.list {
+  .menu-container .site-nav .link {
+    line-height: 1.14;
+    min-height: 60px;
+  }
+  .menu-container .contacts .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 1.17;
+  }
+  .menu-container .icon-tel, .menu-container .icon-mail {
+    margin-right: 8px;
+  }
+  .menu-container .site-nav.list {
     margin-bottom: 302px;
   }
-  .site-nav .link {
+  .menu-container .site-nav .link {
     font-size: 40px;
     line-height: 1.175;
     font-size: 40px;
   }
-  .site-nav .item + .item {
+  .menu-container .site-nav .item + .item {
     margin-top: 32px;
   }
-  .contacts {
+  .menu-container .contacts {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -577,36 +574,50 @@ img {
             flex-direction: column-reverse;
     margin-bottom: 64px;
   }
-  .contacts .item + .item {
+  .menu-container .contacts .item + .item {
     margin-bottom: 32px;
   }
-  .contacts .mail {
+  .menu-container .contacts .mail {
     font-size: 24px;
   }
-  .contacts .tel {
+  .menu-container .contacts .tel {
     font-size: 34px;
   }
-  .contacts .icon-mail, .contacts .icon-tel {
+  .menu-container .contacts .icon-mail, .menu-container .contacts .icon-tel {
     display: none;
   }
-  .social .link {
+  .menu-container .social .link {
     font-size: 18px;
     line-height: 1.22;
     color: #2196f3;
   }
-  .social .item + .item {
+  .menu-container .social .item + .item {
     padding-left: 10px;
     margin-left: 10px;
     border-left: 1px solid rgba(33, 33, 33, 0.2);
   }
-  .social.list {
+  .menu-container .social.list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .main-nav .contacts {
+    margin-top: 21px;
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  .main-nav .contacts .item + .item {
+    margin-top: 10px;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  .main-nav .social {
+    display: none;
+  }
   .menu-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -655,16 +666,23 @@ img {
     background-color: #2196f3;
     color: #2196f3;
   }
-  .main-nav .contacts {
-    margin-top: 21px;
-    font-size: 12px;
-    line-height: 1.17;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .main-nav .contacts .item + .item {
-    margin-top: 10px;
-  }
-  .main-nav .social {
-    display: none;
+  .contacts .item + .item {
+    margin-left: 30px;
   }
 }
 
