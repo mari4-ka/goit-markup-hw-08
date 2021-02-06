@@ -29,7 +29,6 @@
     background-color: $primary-bg-color;
 
     @media screen and (min-width: $width-mobile) {
-      // align-items: flex-end;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -51,12 +50,10 @@
       font-size: 20px;
       color: $title-text-color;
       line-height: 1.5;
-      letter-spacing: 0.03em;
 
       @media screen and (min-width: $width-desktop) {
-        letter-spacing: 1.15;
+        line-height: 1.15;
       }
-
     }
     &-window-form {
       padding: 0 40px 40px 40px;
@@ -142,17 +139,13 @@
     margin-left: 12px;
   }
   .conditions {
-    font-weight: 400;
     font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 00.03em;
     color: $primary-text-color;  
     &-link {
       color: $accent-color;
     }
 
     @media screen and (min-width: $width-desktop) {
-      font-size: 14px;
       line-height: 1.7;
     }
   }

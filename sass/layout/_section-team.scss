@@ -4,13 +4,9 @@
 .team {
     &-title {
         @extend %title;
-
         margin-bottom: 30px;
-
-        font-weight: 700;
+        font-weight: $font-weight-bold;
         font-size: 28px;
-        line-height: 1.17;
-        letter-spacing: 00.03;
 
         @media screen and (min-width: $width-desktop) {
             margin-bottom: 50px;
@@ -26,15 +22,15 @@
         border-radius: 0px 0px 4px 4px;
     }
     &-item {
-        width: 450px;
+        max-width: 450px;
         margin-bottom: 30px;
 
         @media screen and (min-width: $width-tablet) {
-            width: 354px;
+            max-width: 354px;
         }
-
         @media screen and (min-width: $width-desktop) {
-            width: 270px;
+            max-width: 270px;
+            margin-bottom: 0;
         }
     }
     &-photo {
@@ -44,19 +40,17 @@
         margin-top: 0px;
         margin-bottom: 10px;
         color: $title-text-color;
-        font-weight: 500;
-        font-size: 16px;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-secondary;
         line-height: 1.19;
-        letter-spacing: 00.03em;
         text-align: center;
     }
     &-position {
         margin-top: 0px;
         margin-bottom: 16px;
         color: $primary-text-color;
-        font-size: 16px;
+        font-size: $font-size-secondary;
         line-height: 1.19;
-        letter-spacing: 00.03em;
         text-align: center;
       }
     & .social-list {

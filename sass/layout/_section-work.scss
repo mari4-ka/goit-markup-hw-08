@@ -2,8 +2,6 @@
     @media screen and (max-width: 1199px){
         display: none;
     }
-    // padding-top: 0px;
-
     &.work {
         & .list {
         @extend %list;
@@ -31,7 +29,6 @@
         margin-bottom: 0;
         font-weight: $font-weight-bold;
         text-align: center;
-        letter-spacing: $font-spacing-basic;
         text-transform: uppercase;
         color: $secondary-text-color;
         }

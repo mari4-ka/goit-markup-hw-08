@@ -387,6 +387,10 @@ body {
   color: #757575;
   background-color: #ffffff;
   font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.17;
 }
 
 body.modal-open {
@@ -505,6 +509,7 @@ img {
   background-color: white;
   font-weight: 500;
   letter-spacing: 00.02em;
+  z-index: 1;
 }
 
 .menu-container .site-nav .link {
@@ -551,7 +556,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    line-height: 1.17;
   }
   .menu-container .icon-tel, .menu-container .icon-mail {
     margin-right: 8px;
@@ -560,8 +564,6 @@ img {
     margin-bottom: 302px;
   }
   .menu-container .site-nav .link {
-    font-size: 40px;
-    line-height: 1.175;
     font-size: 40px;
   }
   .menu-container .site-nav .item + .item {
@@ -610,7 +612,6 @@ img {
   .main-nav .contacts {
     margin-top: 21px;
     font-size: 12px;
-    line-height: 1.17;
   }
   .main-nav .contacts .item + .item {
     margin-top: 10px;
@@ -723,21 +724,51 @@ img {
   max-width: 1600px;
   height: 400px;
   margin: 0 auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/bg-photo.jpg");
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/bg-photo.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/hero/hero-480.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/hero/hero-480.jpg");
   background-color: #c4c4c4;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.hero .overlay .button {
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero .overlay {
+    background-image: url("../images/hero/hero-960-@2x.jpg");
+  }
+}
+
+.hero .button {
   margin: 0 auto;
 }
 
 @media screen and (min-width: 1200px) {
-  .hero .overlay {
+  .hero {
     height: 600px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .hero .overlay {
+    background-image: url("../images/hero/hero-768.jpg");
+  }
+}
+
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+  .hero .overlay {
+    background-image: url("../images/hero/hero-1536-@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero .overlay {
+    background-image: url("../images/hero/hero-1600.jpg");
+  }
+}
+
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  .hero .overlay {
+    background-image: url("../images/hero/hero-3200-@2x.jpg");
   }
 }
 
@@ -795,23 +826,17 @@ img {
   text-align: center;
   color: #212121;
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 00.03em;
   text-transform: uppercase;
 }
 
 .decision .title .text {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-weight: 400;
-  font-size: 14px;
   line-height: 1.7;
-  letter-spacing: 00.03em;
 }
 
 .decision .text {
-  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -869,7 +894,6 @@ img {
   margin-bottom: 0;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -882,8 +906,6 @@ img {
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 28px;
-  line-height: 1.17;
-  letter-spacing: 00.03;
 }
 
 @media screen and (min-width: 1200px) {
@@ -901,19 +923,20 @@ img {
 }
 
 .team-item {
-  width: 450px;
+  max-width: 450px;
   margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .team-item {
-    width: 354px;
+    max-width: 354px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .team-item {
-    width: 270px;
+    max-width: 270px;
+    margin-bottom: 0;
   }
 }
 
@@ -928,7 +951,6 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  letter-spacing: 00.03em;
   text-align: center;
 }
 
@@ -938,7 +960,6 @@ img {
   color: #757575;
   font-size: 16px;
   line-height: 1.19;
-  letter-spacing: 00.03em;
   text-align: center;
 }
 
@@ -1188,25 +1209,21 @@ img {
 }
 
 .footer .logo {
+  display: block;
   margin-top: 0;
   margin-bottom: 20px;
 }
 
 .footer .footer-adress {
   color: #ffffff;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
-  letter-spacing: 00.03em;
   font-style: normal;
 }
 
 .footer .footer-links {
   color: rgba(255, 255, 255, 0.6);
-  font-weight: 400;
-  font-size: 14px;
   line-height: 1.7;
-  letter-spacing: 00.03em;
   text-decoration: none;
 }
 
@@ -1214,9 +1231,7 @@ img {
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 00.03em;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -1256,7 +1271,7 @@ img {
   .footer-3-block {
     text-align: center;
   }
-  .footer-form input {
+  .footer-form-field input {
     margin-bottom: 20px;
   }
   .footer-3-block .button {
@@ -1281,6 +1296,15 @@ img {
   }
   .footer-3-block {
     text-align: center;
+  }
+  .footer-form-field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1324,8 +1348,6 @@ img {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.17;
-  letter-spacing: 00.03em;
 }
 
 .logo-web {
@@ -1457,12 +1479,11 @@ img {
   font-size: 20px;
   color: #212121;
   line-height: 1.5;
-  letter-spacing: 0.03em;
 }
 
 @media screen and (min-width: 1200px) {
   .modal-title {
-    letter-spacing: 1.15;
+    line-height: 1.15;
   }
 }
 
@@ -1583,10 +1604,7 @@ img {
 }
 
 .conditions {
-  font-weight: 400;
   font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 00.03em;
   color: #757575;
 }
 
@@ -1596,7 +1614,6 @@ img {
 
 @media screen and (min-width: 1200px) {
   .conditions {
-    font-size: 14px;
     line-height: 1.7;
   }
 }

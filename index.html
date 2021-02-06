@@ -203,9 +203,10 @@
                 <ul class="list">
                     <li class="item">
                         <a href="" class="link picture">
-                            <img src="./images/box-1.jpg" 
-                                alt="Программист работает за планшетом" 
-                                width="370">
+                            <img 
+                                src="./images/work/work-01-370.jpg"
+                                srcset="./images/work/work-01-740-@2x.jpg 2x"
+                                alt="Программист работает за планшетом" />
                             <div class="overlay">
                                 <p class="text">Десктопные приложения</p>
                             </div>
@@ -213,9 +214,10 @@
                     </li>
                     <li class="item">
                         <a href="" class="link picture">
-                            <img src="./images/box-2.jpg" 
-                                alt="Человек, который настраивает мобильное приложение"
-                                width="370">
+                            <img 
+                                src="./images/work/work-02-370.jpg"
+                                srcset="./images/work/work-02-740-@2x.jpg 2x"
+                                alt="Человек, который настраивает мобильное приложение" />
                             <div class="overlay">
                                 <p class="text">Мобильные приложения</p>
                             </div>
@@ -223,9 +225,10 @@
                     </li>
                     <li class="item">
                         <a href="" class="link picture">
-                            <img src="./images/box-3.jpg" 
-                                alt="Пользователь рисует на планшете" 
-                                width="370">
+                            <img 
+                                src="./images/work/work-03-370.jpg"
+                                srcset="./images/work/work-03-740-@2x.jpg 2x"
+                                alt="Пользователь рисует на планшете" />
                             <div class="overlay">
                                 <p class="text">Дизайнерские решения</p>
                             </div>
@@ -242,14 +245,22 @@
                 <ul class="team-list list">
                     <li class="team-item">
                         <a href="">
-                            <img 
-                                alt="Фотография, на которой изображен сотрудник Игорь Демьяненко" 
-                                class="team-photo"
-                                src="./images/team-card-01.jpg"
-                                sizes="100vw"
-                                srcset="
-                                    ./images/team-card-01@2x.jpg 2x,
-                                    ./images/team-card-01@3x.jpg 3x"/>
+                                <picture>
+                                    <source 
+                                        srcset="./images/team/team-01-450.jpg, ./images/team/team-01-900-@2x.jpg 2x" 
+                                        media="(max-width: 767px)" />
+                              
+                                    <source
+                                        srcset="./images/team/team-01-354.jpg, ./images/team/team-01-708-@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+                              
+                                    <source
+                                        srcset="./images/team/team-01-270.jpg, ./images/team/team-01-540-@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+                              
+                                    <img class="team-photo" src="./images/team/team-01-354.jpg" alt="Фотография на которой изображен сотрудник Игорь Демьяненко" />
+
+                                  </picture>
                         </a>
                         <h3 class="team-names">Игорь Демьяненко</h3>
                         <p class="team-position">Frontend Developer</p>
@@ -286,10 +297,22 @@
                     </li>
                     <li class="team-item">
                         <a href="">
-                            <img src="./images/team-card-02.jpg"
-                                alt="Фотография, на которой изображена сотрудница Ольга Репина" 
-                                width="270"
-                                class="team-photo">
+                            <picture>
+                                <source 
+                                    srcset="./images/team/team-02-450.jpg, ./images/team/team-02-900-@2x.jpg 2x" 
+                                    media="(max-width: 767px)" />
+                          
+                                <source
+                                    srcset="./images/team/team-02-354.jpg, ./images/team/team-02-708-@2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+                          
+                                <source
+                                    srcset="./images/team/team-02-270.jpg, ./images/team/team-02-540-@2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+                          
+                                <img class="team-photo" src="./images/team/team-01-354.jpg" alt="Фотография на которой изображена сотрудница Ольга Репина" />
+
+                              </picture>
                         </a>
                         <h3 class="team-names">Ольга Репина</h3>
                         <p class="team-position">Frontend Developer</p>
@@ -326,11 +349,23 @@
                     </li>
                     <li class="team-item">
                         <a href="">
-                            <img src="./images/team-card-03.jpg"
-                                alt="Фотография, на которой изображен сотрудник Николай Тарасов" 
-                                width="270"
-                                class="team-photo">
-                            </a>
+                            <picture>
+                                <source 
+                                    srcset="./images/team/team-03-450.jpg, ./images/team/team-03-900-@2x.jpg 2x" 
+                                    media="(max-width: 767px)" />
+                        
+                                <source
+                                    srcset="./images/team/team-03-354.jpg, ./images/team/team-03-708-@2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+                        
+                                <source
+                                    srcset="./images/team/team-03-270.jpg, ./images/team/team-03-540-@2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+                        
+                                <img class="team-photo" src="./images/team/team-01-354.jpg" alt="Фотография, на которой изображен сотрудник Николай Тарасов" />
+
+                            </picture>
+                        </a> 
                         <h3 class="team-names">Николай Тарасов</h3>
                         <p class="team-position">Marketing</p>
                         <ul class="social-list">
@@ -366,11 +401,24 @@
                     </li>
                     <li class="team-item">
                         <a href="">
-                            <img src="./images/team-card-04.jpg"
-                                alt="Фотография, на которой изображен сотрудник Михаил Ермаков" 
-                                width="270"
-                                class="team-photo">
-                            </a>
+                            <picture>
+                                <source 
+                                    srcset="./images/team/team-04-450.jpg, ./images/team/team-04-900-@2x.jpg 2x" 
+                                    media="(max-width: 767px)" />
+                        
+                                <source
+                                    srcset="./images/team/team-04-354.jpg, ./images/team/team-04-708-@2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+                        
+                                <source
+                                    srcset="./images/team/team-04-270.jpg, ./images/team/team-04-540-@2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+                        
+                                <img class="team-photo" src="./images/team/team-01-354.jpg" alt="Фотография, на которой изображен сотрудник Михаил Ермаков"  />
+
+                            </picture>
+                            
+                        </a>
                         <h3 class="team-names">Михаил Ермаков</h3>
                         <p class="team-position">UI Designer</p>
                         <ul class="social-list">
