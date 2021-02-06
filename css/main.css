@@ -1183,8 +1183,42 @@ img {
   padding-bottom: 60px;
 }
 
-.footer {
+.footer .container {
   outline: 1px solid red;
+}
+
+.footer .logo {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.footer .footer-adress {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 00.03em;
+  font-style: normal;
+}
+
+.footer .footer-links {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 00.03em;
+  text-decoration: none;
+}
+
+.footer .title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 00.03em;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
 .footer-1-block {
@@ -1204,14 +1238,42 @@ img {
 }
 
 @media screen and (max-width: 1199px) {
-  .footer-1-block {
+  .footer-1-block, .footer-2-block {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .footer-adress,
+  .footer-links .item + .item {
+    margin-bottom: 8px;
+  }
+  .footer .title {
     text-align: center;
   }
-  .footer-2-block {
-    text-align: center;
+  .footer-2-block .social-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .footer-3-block {
     text-align: center;
+  }
+  .footer-form-field input {
+    width: 100%;
+    max-width: 450px;
+    padding: 15px 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: #2f303a;
+  }
+  .footer-form-field input[placeholder='E-mail'] {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .footer-3-block .button {
+    margin: 0 auto;
   }
 }
 
@@ -1224,6 +1286,11 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
   .footer-3-block {
     text-align: center;
@@ -1231,15 +1298,26 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  .footer-1-block {
+    margin-right: 70px;
+  }
   .footer-position {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
+  .footer .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+  .footer-adress, .footer-links {
+    margin-bottom: 9px;
+  }
   .footer-3-block {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    margin-left: auto;
   }
 }
 
@@ -1292,6 +1370,12 @@ img {
 }
 
 .button.submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 29px;
   padding-left: 29px;
 }
