@@ -31,7 +31,7 @@
     }
 }
 
-//all navigation logo+nav+button+contacrs
+//базовые свойства
 .main-nav {
     display: flex;
     margin-left: 0px;
@@ -66,6 +66,8 @@
         cursor: pointer;
     }
 }
+
+//разные медиа свойства
 @media screen and (max-width: 767px) {
     .menu-container {
         padding: 48px 40px;
@@ -198,12 +200,11 @@
 }
 @media screen and (min-width: 1200px) {
     .contacts {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    .item + .item {
-        margin-left: 30px;
-
-    }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .item + .item {
+            margin-left: 30px;
+        }
     }
 }

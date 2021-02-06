@@ -1,51 +1,51 @@
-.footer-1-block {
-    margin-bottom: 60px;
+// .footer-1-block {
+//     margin-bottom: 60px;
 
-    @media screen and (min-width: $width-desktop) {
-        margin-bottom: 0;
-        margin-right: 70px;
-    }
+//     @media screen and (min-width: $width-desktop) {
+//         margin-bottom: 0;
+//         margin-right: 70px;
+//     }
 
-    & .logo {
-        display: flex;
-        justify-content: center;
-        margin-top: 0px;
-        margin-bottom: 20px;
+//     & .logo {
+//         display: flex;
+//         justify-content: center;
+//         margin-top: 0px;
+//         margin-bottom: 20px;
 
-        @media screen and (min-width: $width-desktop) {
-            justify-content: start;
-        }
+//         @media screen and (min-width: $width-desktop) {
+//             justify-content: start;
+//         }
         
-    }
-    & li {
-        display: flex;
-        justify-content: center;
-        margin-top: 0px;
-        margin-bottom: 8px;
+//     }
+//     & li {
+//         display: flex;
+//         justify-content: center;
+//         margin-top: 0px;
+//         margin-bottom: 8px;
 
-        @media screen and (min-width: $width-desktop) {
-            margin-bottom: 9px;  
-        }
+//         @media screen and (min-width: $width-desktop) {
+//             margin-bottom: 9px;  
+//         }
 
-        @media screen and (min-width: $width-desktop) {
-            justify-content: start;
-        }
-    }
-    & li:last-child {
-        margin-bottom: 0px;
-    }
-    & .footer-adress {
-        margin-top: 0px;
-        color: $secondary-text-color;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.7;
-        letter-spacing: 00.03em;
-        font-style: normal;
-    }
-    & .footer-links {
-        color: rgba(255, 255, 255, 0.6);
-        line-height: $font-height-secondary;
-        text-decoration: none;
-    }
-}
+//         @media screen and (min-width: $width-desktop) {
+//             justify-content: start;
+//         }
+//     }
+//     & li:last-child {
+//         margin-bottom: 0px;
+//     }
+//     & .footer-adress {
+//         margin-top: 0px;
+//         color: $secondary-text-color;
+//         font-weight: 400;
+//         font-size: 14px;
+//         line-height: 1.7;
+//         letter-spacing: 00.03em;
+//         font-style: normal;
+//     }
+//     & .footer-links {
+//         color: rgba(255, 255, 255, 0.6);
+//         line-height: $font-height-secondary;
+//         text-decoration: none;
+//     }
+// }

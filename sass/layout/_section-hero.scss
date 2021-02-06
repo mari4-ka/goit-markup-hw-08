@@ -38,6 +38,10 @@
       background-size: cover;
       background-position: center;
 
+      .button {
+        margin: 0 auto;
+      }
+
       @media screen and (min-width: $width-desktop) {
         height: 600px;
       }
