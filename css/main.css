@@ -445,6 +445,10 @@ img {
   background-color: #ffffff;
 }
 
+.page-header.border {
+  border-bottom: 1px solid #ececec;
+}
+
 .page-header {
   position: relative;
 }
@@ -1237,6 +1241,22 @@ img {
   outline: 1px solid pink;
 }
 
+.footer-form-field input {
+  width: 450px;
+  padding: 15px 16px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: #2f303a;
+}
+
+.footer-form-field input[placeholder='E-mail'] {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 @media screen and (max-width: 1199px) {
   .footer-1-block, .footer-2-block {
     text-align: center;
@@ -1256,21 +1276,6 @@ img {
   }
   .footer-3-block {
     text-align: center;
-  }
-  .footer-form-field input {
-    width: 100%;
-    max-width: 450px;
-    padding: 15px 16px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: #2f303a;
-  }
-  .footer-form-field input[placeholder='E-mail'] {
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 1.25;
-    color: rgba(255, 255, 255, 0.6);
   }
   .footer-3-block .button {
     margin: 0 auto;
@@ -1298,6 +1303,18 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  .footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .footer-1-block {
     margin-right: 70px;
   }
@@ -1313,11 +1330,8 @@ img {
   .footer-adress, .footer-links {
     margin-bottom: 9px;
   }
-  .footer-3-block {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    margin-left: auto;
+  .footer-form-field input {
+    width: 358px;
   }
 }
 

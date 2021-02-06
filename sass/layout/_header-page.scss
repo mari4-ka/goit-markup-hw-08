@@ -1,3 +1,6 @@
 .page-header {
-background-color: $primary-bg-color;
+    background-color: $primary-bg-color;
 }
+.page-header.border {
+    border-bottom: 1px solid $border-header;
+  }
