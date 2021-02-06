@@ -242,9 +242,14 @@
                 <ul class="team-list list">
                     <li class="team-item">
                         <a href="">
-                            <img src="./images/team-card-01.jpg" alt="Фотография, на которой изображен сотрудник Игорь Демьяненко" 
-                                width="270"
-                                class="team-photo">
+                            <img 
+                                alt="Фотография, на которой изображен сотрудник Игорь Демьяненко" 
+                                class="team-photo"
+                                src="./images/team-card-01.jpg"
+                                sizes="100vw"
+                                srcset="
+                                    ./images/team-card-01@2x.jpg 2x,
+                                    ./images/team-card-01@3x.jpg 3x"/>
                         </a>
                         <h3 class="team-names">Игорь Демьяненко</h3>
                         <p class="team-position">Frontend Developer</p>
@@ -521,16 +526,18 @@
             <div class="footer-3-block">
                 <form class="form js-speaker-form">
                     <div class="footer-form-field">
-                        <p class="title">Подпишитесь на рассылку</p>
-                        <label>
-                            <input type="email" name="email" id="email-sign" placeholder="E-mail" />
-                        </label>
-                        <button class="button submit" type="submit">Подписаться
-                            <svg class="icon-send">
-                                <use href="./images/sprite.svg#icon-send"></use>
-                            </svg>
-                        </button>
-                    </div> 
+                        <div>    
+                            <p class="title">Подпишитесь на рассылку</p>
+                        </div>
+                            <label>
+                                <input type="email" name="email" id="email-sign" placeholder="E-mail" />
+                            </label>
+                            <button class="button submit" type="submit">Подписаться
+                                <svg class="icon-send">
+                                    <use href="./images/sprite.svg#icon-send"></use>
+                                </svg>
+                            </button>
+                    </div>
                 </form>
             </div>
         </div>
