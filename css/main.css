@@ -763,6 +763,7 @@ img {
 @media screen and (min-width: 769px) {
   .hero .overlay {
     background-image: url("../images/hero/hero-1600.jpg");
+    height: 600px;
   }
 }
 
