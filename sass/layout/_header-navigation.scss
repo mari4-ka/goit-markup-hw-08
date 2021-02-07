@@ -49,6 +49,9 @@
     & .site-nav .link {
         color: #212121;
     }
+    .icon-tel, .icon-mail {
+        margin-right: 8px;
+    }
     & .contacts .link {
         color: #757575;
         .icon-tel, 
@@ -81,17 +84,16 @@
         &.is-open {
             display: block;
         }
-            & .site-nav .link {
+        & .site-nav .link {
             line-height: 1.14;
-           min-height: 60px;
+            min-height: 60px;
         }
         & .contacts .link {
             display: flex;
         }
-
-        .icon-tel, .icon-mail {
-            margin-right: 8px;
-        }
+        // .icon-tel, .icon-mail {
+        //     margin-right: 8px;
+        // }
         .site-nav {
             &.list {
                margin-bottom: 302px;

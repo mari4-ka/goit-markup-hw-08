@@ -393,10 +393,6 @@ body {
   line-height: 1.17;
 }
 
-body.modal-open {
-  overflow: hidden;
-}
-
 .container {
   width: 480px;
   margin: 0 auto;
@@ -516,6 +512,10 @@ img {
   color: #212121;
 }
 
+.menu-container .icon-tel, .menu-container .icon-mail {
+  margin-right: 8px;
+}
+
 .menu-container .contacts .link {
   color: #757575;
 }
@@ -558,9 +558,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .menu-container .icon-tel, .menu-container .icon-mail {
-    margin-right: 8px;
   }
   .menu-container .site-nav.list {
     margin-bottom: 302px;
