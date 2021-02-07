@@ -2,10 +2,7 @@
   &-title {
     padding-top: 118px;
     padding-bottom: 30px;
-    margin: 0 auto;
-    @media screen and (min-width: $width-desktop) {
-      padding-top: 200px;
-    }
+    // margin: 0 auto;
   }
   &-text {
     margin: 0;
@@ -45,9 +42,6 @@
   .button {
     margin: 0 auto;
   }
-  @media screen and (min-width: $width-desktop) {
-    height: 600px;
-  }
 }
 
 @media screen and (min-width: 481px) {
@@ -66,8 +60,7 @@
 @media screen and (min-width: 769px) {
   .hero .overlay {
     background-image: url('../images/hero/hero-1600.jpg');
-    height: 600px;
-  }
+}
 
   @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
@@ -75,5 +68,14 @@
     .hero .overlay {
       background-image: url('../images/hero/hero-3200-@2x.jpg');
     }
+  }
+}
+
+@media screen and (min-width: $width-desktop) {
+  .overlay {
+  height: 600px;
+}
+  .hero .title {
+    padding-top: 200px;
   }
 }
