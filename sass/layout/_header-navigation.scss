@@ -53,6 +53,8 @@
         margin-right: 8px;
     }
     & .contacts .link {
+        display: flex;
+        align-items: center;
         color: #757575;
         .icon-tel, 
         .icon-mail {
@@ -91,9 +93,6 @@
         & .contacts .link {
             display: flex;
         }
-        // .icon-tel, .icon-mail {
-        //     margin-right: 8px;
-        // }
         .site-nav {
             &.list {
                margin-bottom: 302px;
