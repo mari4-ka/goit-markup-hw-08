@@ -1,7 +1,9 @@
 .footer {
     background-color: $accent-bg-color;
+    max-width: 1600px;
     padding-top: 60px;
-    padding-bottom: 60px; 
+    padding-bottom: 60px;
+
     .logo {
         display: block;
         margin-top: 0;
