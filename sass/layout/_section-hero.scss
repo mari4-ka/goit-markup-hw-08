@@ -35,7 +35,11 @@
     @media screen and (min-device-pixel-ratio: 2),
           screen and (min-resolution: 192dpi),
           screen and (min-resolution: 2dppx) {
-            background-image: url('../images/hero/hero-960-@2x.jpg')
+            background-image: linear-gradient(
+              to right,
+              rgba(0, 0, 0, 0.4), 
+              rgba(0, 0, 0, 0.4)),
+              url('../images/hero/hero-960-@2x.jpg')
     }
   }
   .button {
@@ -45,36 +49,53 @@
 
 @media screen and (min-width: 481px) {
   .hero .overlay {
-    background-image: url('../images/hero/hero-768.jpg')
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)),
+      url('../images/hero/hero-768.jpg');
   }
 
   @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
     .hero .overlay {
-      background-image: url('../images/hero/hero-1536-@2x.jpg');
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.4), 
+          rgba(0, 0, 0, 0.4)),url('../images/hero/hero-1536-@2x.jpg');
     }
   }
 }
 @media screen and (min-width: 769px) {
   .hero .overlay {
-    background-image: url('../images/hero/hero-1600.jpg');
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)),
+      url('../images/hero/hero-1600.jpg');
 }
 
   @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
     .hero .overlay {
-      background-image: url('../images/hero/hero-3200-@2x.jpg');
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)),
+        url('../images/hero/hero-3200-@2x.jpg');
     }
   }
 }
 
 @media screen and (min-width: $width-desktop) {
+  .hero {
   .overlay {
   height: 600px;
-}
-  .hero .title {
+  }
+  .hero-title {
     padding-top: 200px;
   }
+}
 }

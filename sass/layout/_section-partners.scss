@@ -1,6 +1,10 @@
 .partners {
     & .title {
         @extend %title;
+        margin-bottom: 30px;
+        @media screen and (min-width: $width-desktop) {
+            margin-bottom: 50px;
+        }
     }
     & .list {
         @extend %list;

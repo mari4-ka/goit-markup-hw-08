@@ -9,7 +9,7 @@
         background-color: transparent;
         transition: $function-time $function-cubic;
         cursor: pointer;
-        z-index: 2;
+        z-index: 3;
         justify-content: center;
 
         @media screen and (min-width: $width-tablet) {
@@ -45,7 +45,7 @@
     background-color: $primary-bg-color;
     font-weight: $font-weight-medium;
     letter-spacing: 00.02em;
-    z-index: 1;
+    z-index: 2;
     & .site-nav .link {
         color: #212121;
     }
