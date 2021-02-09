@@ -720,6 +720,7 @@ img {
 
 .hero .overlay {
   max-width: 1600px;
+  min-width: 480px;
   height: 400px;
   margin: 0 auto;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../images/hero/hero-480.jpg");
@@ -916,6 +917,7 @@ img {
 
 .section.team {
   background-color: #f5f4fa;
+  min-width: 480px;
 }
 
 .team-title {
@@ -1230,7 +1232,7 @@ img {
 
 .footer {
   background-color: #2f303a;
-  max-width: 1600px;
+  min-width: 480px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
