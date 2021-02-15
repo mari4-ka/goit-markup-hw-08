@@ -61,24 +61,35 @@
     }
   }
   
-.close-button {
-    display: block;
-    margin: 0 auto;
+  .close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
     height: 30px;
     width: 30px;
-    border-radius: 50%;
-    margin-top: 8px;
-    margin-right: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 8px 8px 0 auto;
+
     cursor: pointer;
     background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: transform $function-time $function-cubic;
-    z-index: 5;   
-  &:hover,
-  &:focus {
-      color: $accent-color;
+    z-index: 5;
+    fill: black;
+
+    & .cross {
+      fill: black;
     }
-  }
+
+    & .icon-cross {
+      fill: black;
+    }
+
+    &:hover .icon-cross,
+    &:focus .icon-cross {
+      fill: $accent-color;
+    }
+}
   .form-field-list {
     list-style: none;
     padding: 0;
