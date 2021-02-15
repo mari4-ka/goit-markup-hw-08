@@ -15,11 +15,15 @@
         font-size: 14px;
         line-height: 1.7;
         font-style: normal;
-        }
+    }
     .footer-links {
         color: rgba(255, 255, 255, 0.6);
         line-height: 1.7;
         text-decoration: none;
+        transition: $function-time $function-cubic;
+        &:hover {
+            color: $accent-color;
+        }
     }
     .title {
         margin-top: 0;

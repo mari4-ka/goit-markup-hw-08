@@ -75,15 +75,6 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: transform $function-time $function-cubic;
     z-index: 5;
-    fill: black;
-
-    & .cross {
-      fill: black;
-    }
-
-    & .icon-cross {
-      fill: black;
-    }
 
     &:hover .icon-cross,
     &:focus .icon-cross {
