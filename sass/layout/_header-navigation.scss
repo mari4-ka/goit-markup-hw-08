@@ -1,8 +1,5 @@
-// .page-header {
-// position: relative;
-// }
-.page-header .container {
-    position: relative;
+.page-header {
+position: relative;
 }
 
 // buttons
@@ -14,7 +11,6 @@
         transition: $function-time $function-cubic;
         cursor: pointer;
         z-index: 3;
-        justify-content: center;
 
         @media screen and (min-width: $width-tablet) {
             display: none;
@@ -85,14 +81,15 @@
         left: 0;
         top: 0;
         padding: 48px 40px;
-        
+        min-height: 100vh;
+        height: 100%;
         width: 100%;
-        // добавляю ширину меню
-        max-width: 480px;
         
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
         &.is-open {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         & .site-nav .link {
             line-height: 1.14;
@@ -102,9 +99,6 @@
             display: flex;
         }
         .site-nav {
-            &.list {
-               margin-bottom: 302px;
-            }
             & .link {
                 font-size: 40px;
             }
@@ -115,8 +109,7 @@
         .contacts {
             display: flex;
             flex-direction: column-reverse;
-            margin-bottom: 64px;
-    
+            margin-bottom: 64px;   
             .item + .item {
                 margin-bottom: 32px;
             }
@@ -131,6 +124,7 @@
         } 
     }
         .social {
+            flex-wrap: wrap;
             & .link {
                 font-size: $font-size-tertiary;
                 line-height: 1.22;
@@ -162,9 +156,9 @@
         display: none;
     }
     .menu-container {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
     }
     .main-nav .logo {
         margin-right: 88px;
@@ -200,6 +194,9 @@
     }
 }
 @media screen and (min-width: 1200px) {
+    .network {
+        margin: auto 0;
+    }
     .contacts {
         display: flex;
         flex-direction: row;

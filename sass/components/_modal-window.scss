@@ -21,26 +21,27 @@
     }
 }
 
+
 .modal {
     display: flex;
+    position: relative;
+    left: 50%;
     flex-direction: column;
     padding: 0;
     margin: 0;
+    min-width: 290px;
+    width: 100%;
     background-color: $primary-bg-color;
+    transform: translate(-50%) scale(1);
 
     @media screen and (min-width: $width-mobile) {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(1);
-      max-width: 450px;
-      width: 100%;
-      min-height: 609px;
+      width: 450px;
+      max-height: 609px;
     }
 
     @media screen and (min-width: $width-desktop){
-      min-width: 528px;
-      min-height: 581px;
+      width: 528px;
+      max-height: 581px;
     }
 
     &-title {
@@ -71,7 +72,6 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
     background-color: transparent;
-  
     transition: transform $function-time $function-cubic;
     z-index: 5;   
   &:hover,
@@ -120,6 +120,8 @@
       box-sizing: border-box;
       border-radius: 4px;
     }
+    &:focus textarea,
+    &:hover textarea,
     &:focus-within input,
     &:focus-within .input-svg-properties,
     &:hover input,
@@ -141,7 +143,7 @@
   }
   .conditions {
     font-size: 12px;
-    color: $primary-text-color;  
+    color: $primary-text-color;
     &-link {
       color: $accent-color;
     }
@@ -172,6 +174,7 @@
     width: 16px;
     height: 15px;
     margin-right: 8px;
+    cursor: pointer;
   }
 
   .checkbox-position {

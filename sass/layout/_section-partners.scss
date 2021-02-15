@@ -8,7 +8,8 @@
     }
     & .list {
         @extend %list;
-        margin: -15px
+        margin: -15px;
+        justify-content: center;
     }
     & .item {
         margin: 15px;
